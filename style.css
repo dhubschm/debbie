@@ -1,8 +1,8 @@
 :root {
   --bg: #0a0a0f;
   --surface: #13131a;
-  --accent-primary: #e8613a;
-  --accent-secondary: #c43a3a;
+  --accent-primary: #752bf5;
+  --accent-secondary: #8d0404;
   --text-primary: #f0f0f0;
   --text-muted: #888;
   --border: #1e1e2e;
@@ -54,6 +54,7 @@ nav a:hover {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  gap: 3rem;
 }
 
 .hero-text {
@@ -74,13 +75,21 @@ nav a:hover {
   font-size: 1.1rem;
 }
 
+.hero a {
+  color: var(--text-muted);
+}
+
+.hero a:hover{
+  color: var(--accent-secondary);
+}
+
 .robot-img {
-  width: 400px;
-  height: 400px;
+  width: 40%;
+  height: auto;
+  aspect-ratio: 4 / 3;
   border-radius: 12px;
   object-fit: cover;
   border: 2px solid var(--accent-primary);
-  margin-right: 3rem;
 }
 
 section h2 {
@@ -107,7 +116,7 @@ section h2 {
 }
 
 .card:hover {
-  border-color: var(--accent-primary);
+  border-color: var(--accent-secondary);
 }
 
 .card h3 {
@@ -168,7 +177,7 @@ section h2 {
 }
 
 .timeline-content:hover {
-  border-color: var(--accent-primary);
+  border-color: var(--accent-secondary);
 }
 
 .timeline-content h3 {
@@ -180,4 +189,56 @@ section h2 {
 .timeline-content p {
   color: var(--text-muted);
   font-size: 0.95rem;
+}
+
+@media (max-width: 900px) {
+  .hero-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .robot-img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+
+  .card-grid {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+
+  .card {
+    min-width: unset;
+  }
+
+  .timeline {
+    padding: 2rem 1.5rem;
+  }
+
+  .timeline::before {
+    left: calc(1.5rem + 7px);
+  }
+
+  section h2 {
+    padding: 2rem 1.5rem 0;
+  }
+}
+
+@media (max-width: 600px) {
+  nav {
+    padding: 1rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  nav a {
+    margin-left: 1rem;
+  }
+
+  .hero {
+    padding: 3rem 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
 }
