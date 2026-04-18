@@ -15,6 +15,7 @@
         <a href="#specs">Specs</a>
         <a href="#timeline">Build</a>
         <a href="#competition">Competition</a>
+        <a href="https://dhubschm.github.io">Portfolio</a>
       </div>
     </nav>
 
@@ -28,7 +29,7 @@
            <a href="https://www.linkedin.com/in/akshay-tripathi-aab145277/">Akshay Tripathi</a>, and
            <a href="https://www.linkedin.com/in/dominichubschmitt/">Dominic Hubschmitt</a></p>
         </div>
-        <img src="images\debbie_isoview.png" alt="Debbie combat robot" class="robot-img">
+        <img src="images/debbie_isoview.png" alt="Debbie combat robot" class="robot-img">
       </div>
     </section>
 
@@ -64,57 +65,96 @@
 
     <section id="timeline">
       <h2>Build Process</h2>
-      <div class="timeline">
+      <div class="timeline-horizontal">
 
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <h3>Step 1</h3>
-            <p>Preliminary CAD</p>
-          </div>
+        <div class="timeline-step" onclick="openStep(0)">
+          <div class="step-dot"></div>
+          <div class="step-label">Step 1</div>
+          <div class="step-preview">PDR + Initial CAD</div>
         </div>
 
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <h3>Step 2</h3>
-            <p>Fill in your second build step here.</p>
-          </div>
+        <div class="timeline-connector"></div>
+
+        <div class="timeline-step" onclick="openStep(1)">
+          <div class="step-dot"></div>
+          <div class="step-label">Step 2</div>
+          <div class="step-preview">Initial Circuit Design</div>
         </div>
 
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <h3>Step 3</h3>
-            <p>Fill in your third build step here.</p>
-          </div>
+        <div class="timeline-connector"></div>
+
+        <div class="timeline-step" onclick="openStep(2)">
+          <div class="step-dot"></div>
+          <div class="step-label">Step 3</div>
+          <div class="step-preview">Electronics Testing</div>
         </div>
 
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <h3>Step 4</h3>
-            <p>Fill in your fourth build step here.</p>
-          </div>
+        <div class="timeline-connector"></div>
+
+        <div class="timeline-step" onclick="openStep(3)">
+          <div class="step-dot"></div>
+          <div class="step-label">Step 4</div>
+          <div class="step-preview">Final Design Review</div>
         </div>
 
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <h3>Step 5</h3>
-            <p>Fill in your fifth build step here.</p>
-          </div>
+        <div class="timeline-connector"></div>
+
+        <div class="timeline-step" onclick="openStep(4)">
+          <div class="step-dot"></div>
+          <div class="step-label">Step 5</div>
+          <div class="step-preview">Assembly + Testing</div>
+        </div>
+
+        <div class="timeline-connector"></div>
+
+        <div class="timeline-step" onclick="openStep(5)">
+          <div class="step-dot"></div>
+          <div class="step-label">Step 6</div>
+          <div class="step-preview">Competition Day</div>
+        </div>
+
+        <div class="timeline-connector"></div>
+
+        <div class="timeline-step" onclick="openStep(6)">
+          <div class="step-dot"></div>
+          <div class="step-label">Step 7</div>
+          <div class="step-preview">First Battle</div>
+        </div>
+
+        <div class="timeline-connector"></div>
+
+        <div class="timeline-step" onclick="openStep(7)">
+          <div class="step-dot"></div>
+          <div class="step-label">Step 8</div>
+          <div class="step-preview">Second Battle</div>
         </div>
 
       </div>
     </section>
+
+    <div class="step-overlay" id="stepOverlay" onclick="closeStep()">
+      <div class="step-modal-wrapper" onclick="event.stopPropagation()">
+        <button class="arrow-btn left" onclick="navigateStep(-1)">&#8592;</button>
+        <div class="step-modal">
+          <button class="close-btn" onclick="closeStep()">✕</button>
+          <img id="modalImg" src="" alt="" class="modal-img">
+          <div id="modalGallery" class="modal-gallery"></div>
+          <iframe id="modalEmbed" src="" class="modal-embed" frameborder="0" allowfullscreen></iframe>
+          <div class="modal-body">
+            <h3 id="modalTitle"></h3>
+            <p id="modalDesc"></p>
+          </div>
+        </div>
+        <button class="arrow-btn right" onclick="navigateStep(1)">&#8594;</button>
+      </div>
+    </div>
 
     <section id="competition">
       <h2>Competition</h2>
       <div class="card-grid">
         <div class="card">
           <h3>Event</h3>
-          <p>UCI ACE Antweigt Competition 2026</p>
+          <p>UCI ACE Antweight Competition 2026</p>
         </div>
         <div class="card">
           <h3>Result</h3>
