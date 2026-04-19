@@ -87,7 +87,7 @@ function openStep(index) {
     imgGallery.style.display = 'none';
     imgGallery.innerHTML = '';
   }
-
+  updateArrows();
   document.getElementById('stepOverlay').classList.add('open');
   document.body.style.overflow = 'hidden';
 }
@@ -110,3 +110,8 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'ArrowRight') navigateStep(1);
   if (e.key === 'ArrowLeft') navigateStep(-1);
 });
+
+function updateArrows() {
+  document.querySelector('.arrow-btn.left').style.opacity = currentStep === 0 ? '0.3' : '1';
+  document.querySelector('.arrow-btn.right').style.opacity = currentStep === steps.length - 1 ? '0.3' : '1';
+}

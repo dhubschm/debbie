@@ -366,3 +366,57 @@ section h2 {
 .arrow-btn:hover {
   border-color: var(--accent-primary);
 }
+
+
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 2rem 3rem;
+}
+
+.team-card {
+  flex: 1;
+  min-width: 180px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: border-color 0.2s;
+}
+
+.team-card:hover {
+  border-color: var(--accent-primary);
+}
+
+.team-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accent-primary);
+  margin-bottom: 1rem;
+}
+
+.team-card h3 {
+  color: var(--text-primary);
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.team-card p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+.team-card a {
+  color: var(--accent-primary);
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.team-card a:hover {
+  color: var(--accent-secondary);
+}
